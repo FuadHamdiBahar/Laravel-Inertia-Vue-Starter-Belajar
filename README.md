@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## After cloning this repo, do the following steps:
 1. `composer install`
 2. `npm install`
@@ -75,3 +76,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Laravel-Inertia-Vue-Starter-Belajar
+Belajar larevel inertia vue
+>>>>>>> ae1f7ffc1a6d420f867b3baaf6b80266f2df0383
