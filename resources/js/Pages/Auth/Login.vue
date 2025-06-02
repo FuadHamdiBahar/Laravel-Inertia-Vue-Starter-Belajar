@@ -6,7 +6,12 @@ import InputField from '../../Components/InputField.vue';
 import PrimaryBtn from '../../Components/PrimaryBtn.vue';
 import { useForm } from '@inertiajs/vue3';
 import ErrorMessages from '../../Components/ErrorMessages.vue';
+import SessionMessages from '../../Components/SessionMessages.vue';
 import CheckBox from '../../Components/CheckBox.vue';
+
+defineProps({
+    status: String,
+})
 
 const form = useForm({
     email: "",
@@ -37,6 +42,8 @@ const submit = () => {
 
         <ErrorMessages :errors="form.errors" />
 
+        <SessionMessages :status="status"></SessionMessages>
+
         <form @submit.prevent="submit" class="space-y-6">
 
             <InputField label="Email" icon="at" v-model="form.email" />
@@ -44,7 +51,7 @@ const submit = () => {
 
             <div class="flex items-center justify-between">
                 <CheckBox name="remember" v-model="form.remember">Remember me</CheckBox>
-                <TextLink routeName="home" label="Forgot Password?" />
+                <TextLink routeName="password.request" label="Forgot Password?" />
             </div>
             <PrimaryBtn :disabled="form.processing">Login</PrimaryBtn>
         </form>
