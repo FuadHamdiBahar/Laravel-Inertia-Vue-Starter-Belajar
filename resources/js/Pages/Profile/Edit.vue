@@ -1,5 +1,13 @@
-<script setup></script>
+<script setup>
+import UpdateInfo from './Sections/UpdateInfo.vue';
+
+defineProps({
+    user: Object
+})
+</script>
 
 <template>
-    <div>Profile</div>
+
+    <Head title="- Profile" />
+    <UpdateInfo :user="user" />
 </template>
